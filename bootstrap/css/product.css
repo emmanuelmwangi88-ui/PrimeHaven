@@ -1,0 +1,95 @@
+body {
+  text-align: start;
+  padding: 1rem;
+  background-color: #c5d5da;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #45851b;
+  background-color: #e5e6e5;
+  border-radius: 12px;
+  transition: color 0.3s ease; /* smooth hover effect */
+}
+
+h1:hover {
+  color: #100c00;
+}
+
+h2 {
+  text-align: center;
+  color: #c5a55a;
+}
+
+/* Header links */
+header a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s ease; /* smooth hover effect */
+}
+
+header a:hover {
+  color: #ff9800; /* changes to orange when hovered */
+}
+
+/* Section 1 */
+.section1 {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eeeae0;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.8rem;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.card button {
+  background-color: #c5a55a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #a8893d;
+}
+
+/* Section 2 */
+.section2 {
+  text-align: center;
+  padding: 1rem;
+  background-color: #c5a55a;
+}

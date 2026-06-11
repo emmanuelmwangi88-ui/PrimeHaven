@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Showcase</title>
+  <style>
+    body {
+      text-align: start;
+      padding: 1rem;
+      background-color: #ecedef;
+      font-family: Arial, sans-serif;
+    }
+    header {
+        border-radius: 12px;
+      display: flex;
+      background-color: green;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .nav-links ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      margin: 0 10px;
+    }
+    a {
+      color: #100c00;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #90f637;
+    }
+    .section-title {
+      color: #e9791c;
+      text-align: center;
+      background-color: #e5e6e5;
+      border-radius: 12px;
+      font-size: 30px;
+      margin-top: 20px;
+      padding: 10px;
+    }
+    ol, ul {
+      margin-left: 20px;
+    }
+    li {
+      color: #46450d;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #333;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 1px;
+      border-radius: 8px;
+    }
+    form {
+      margin-top: 20px;
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    form button {
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #5bcc33;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-links">
+      <ul>
+        <li><a href="#TopItems">Top Items</a></li>
+        <li><a href="#Recents">Recents</a></li>
+        <li><a href="#Nested">Nested List</a></li>
+        <li><a href="#Description">Description</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Ordered list -->
+  <div class="section-title" id="TopItems">Top 4 Selling Products This Month</div>
+  <ol type="a">
+    <li>
+      Wireless Bluetooth Headphones
+      <p>High-quality sound with noise cancellation.</p>
+    </li>
+    <li>
+      Smart Watch
+      <p>Tracks fitness, heart rate, and notifications.</p>
+    </li>
+    <li>
+      Yoga Mat
+      <p>Durable and eco-friendly material.</p>
+    </li>
+    <li>
+      Water Bottle
+      <p>Insulated to keep drinks hot or cold.</p>
+    </li>
+  </ol>
+
+  <!-- Unordered list -->
+  <div class="section-title" id="Recents">Top 4 Selling Products Last Month</div>
+  <ul>
+    <li>Casual T-shirt</li>
+    <li>Sports Wear</li>
+    <li>Jeans Trousers</li>
+    <li>Jackets and Coats</li>
+  </ul>
+
+  <!-- Nested list -->
+  <div class="section-title" id="Nested">Nested List</div>
+  <ul>
+    <li>DSA
+      <ul>
+        <li>Arrays</li>
+        <li>Linked Lists</li>
+        <li>Stacks</li>
+        <li>Queues</li>
+      </ul>
+    </li>
+    <li>Web Technologies
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+      </ul>
+    </li>
+    <li>Cloud Computing
+      <ul>
+        <li>AWS</li>
+        <li>Google Cloud</li>
+        <li>Microsoft Azure</li>
+      </ul>
+    </li>
+    <li>Machine Learning
+      <ul>
+        <li>Supervised Learning</li>
+        <li>Unsupervised Learning</li>
+        <li>Reinforcement Learning</li>
+      </ul>
+    </li>
+    <li>Aptitude</li>
+    <li>Gate</li>
+    <li>Placement</li>
+    <li>Artificial Intelligence</li>
+    <li>Neural Networks</li>
+  </ul>
+
+  <!-- Description list -->
+  <div class="section-title" id="Description">Description List</div>
+  <dl>
+    <dt>HTML</dt>
+    <dd>HTML is a markup language used for structuring and presenting content on the World Wide Web.</dd>
+    <dt>CSS</dt>
+    <dd>CSS is used to style and format HTML elements.</dd>
+    <dt>JavaScript</dt>
+    <dd>JavaScript adds interactivity and dynamic behavior to web pages.</dd>
+  </dl>
+
+  <!-- Contact Form -->
+  <div class="section-title" id="Contact">Contact Us</div>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" rows="4" placeholder="Your message here..."></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Product Showcase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
