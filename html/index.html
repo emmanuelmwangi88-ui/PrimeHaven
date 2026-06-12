@@ -1,74 +1,127 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/images/home.png" />
-        <title>My Business</title>
-        <style>
-            body{
-                text-align: start;
-                padding: 1rem;
-                background-color: #ecedef;
-            }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/images/home.png" />
+  <title>PrimeHaven Online Store</title>
+  <link rel="stylesheet" href="/bootstrap/css/theme.css">
+  <style>
+    .banner {
+      background: linear-gradient(135deg, rgba(197,165,90,0.1), rgba(36,44,139,0.1));
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .banner h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .services-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .services-list li {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
 
-            div {color: #242c8b;
-                font-size: 40px;
-                font-weight: bold;
-            }
-            h2{color: #c5a55a;
-            }
-            h3{color: #c5a55a;
-                
-            }
+<!-- Header -->
+<header>
+  <div class="container">
+    <a href="/html/index.html" class="logo">PrimeHaven</a>
+    <nav>
+      <a href="/html/list.html">List</a>
+      <a href="/html/location.html">Find Us</a>
+      <a href="/html/product.html">Products</a>
+      <a href="/html/services.html">Services</a>
+      <a href="/html/register.html">Register</a>
+      <a href="/html/inventory.html">Inventory</a>
+    </nav>
+  </div>
+</header>
 
-            button{
-                background-color: #c5a55a;
-                border-radius: 12px;
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                }
-        </style>
-    </head>
-    <body>
+<main class="container">
+  <!-- Welcome Banner -->
+  <div class="banner">
+    <h1>Welcome to PrimeHaven Online Store</h1>
+    <p>Your trusted destination for premium anime merchandise</p>
+  </div>
 
-<ul>
-<a href="/html/list.html" >List</a>
-<a href="/html/location.html" >find us</a>
-<a href="/html/product.html" >Product</a>
-<a href="/html/services.html" >Services</a>
-<a href="/html/table.html" >Tables</a>
-</ul>
+  <!-- About Section -->
+  <section>
+    <h2>About PrimeHaven</h2>
+    <p>PrimeHaven is your trusted online destination for premium anime merchandise. We pride ourselves on offering high-quality items at unbeatable prices, ensuring every customer enjoys both value and style.</p>
+    <p>Founded with a vision to bring convenience and variety to shoppers across Kenya and beyond, PrimeHaven blends modern e-commerce with personalized service. Whether you’re looking for anime-inspired apparel, collectible accessories, or unique items, we’ve got you covered.</p>
+  </section>
 
+  <!-- Products Highlight -->
+  <section>
+    <h2>Discover Amazing Products</h2>
+    <p>Our catalog includes a wide range of items: stylish hoodies, trendy t-shirts, collectible accessories, and more. Each product is carefully selected to meet our customers’ expectations for quality and affordability.</p>
+    <button onclick="window.location.href='/html/product.html'">Shop Now</button>
+  </section>
 
+  <!-- Services Section -->
+  <section>
+    <h2>Our Services</h2>
+    <p>At PrimeHaven, we go beyond selling products. We provide:</p>
+    <ul class="services-list">
+      <li>✔ Fast and reliable delivery across Kenya</li>
+      <li>✔ Secure payment options including M-Pesa, Airtel Money, and Visa/MasterCard</li>
+      <li>✔ 24/7 customer support to assist with your orders</li>
+      <li>✔ Easy returns and exchanges for peace of mind</li>
+    </ul>
+  </section>
 
+  <!-- Customer Promise -->
+  <section>
+    <h2>Our Promise</h2>
+    <p>We believe shopping should be simple, enjoyable, and trustworthy. That’s why we guarantee:</p>
+    <ul class="services-list">
+      <li><strong>Quality:</strong> Only the best products make it to our store.</li>
+      <li><strong>Affordability:</strong> Competitive prices without compromising standards.</li>
+      <li><strong>Convenience:</strong> Shop anytime, anywhere, with fast delivery to your doorstep.</li>
+    </ul>
+  </section>
 
+  <!-- Contact Section -->
+  <section>
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div>📍 <strong>Location:</strong> Nairobi, Kenya</div>
+      <div>📞 <strong>Phone:</strong> +254 700 123 456</div>
+      <div>📧 <strong>Email:</strong> support@primehaven.com</div>
+    </div>
+  </section>
+</main>
 
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 PrimeHaven Online Store. All rights reserved.</p>
+</footer>
 
-<div ><marquee behavior="alternate" direction=""> Welcome to Prime Haven Online store </marquee></div > 
-
-<h2>Welcome to PrimeHaven Online Store</h2>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minima omnis sapiente aliquid molestiae atque delectus esse aut minus ipsam repellendus ullam ad, placeat laudantium nemo vitae cum reprehenderit.</p>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam itaque impedit reprehenderit, praesentium, optio consequuntur perferendis laborum ratione adipisci fugit velit commodi minus? Saepe obcaecati corporis sequi laboriosam quidem! Debitis labore tempore, eaque beatae consequatur impedit cum reprehenderit deserunt ullam recusandae aut perferendis veniam nihil. Velit, repudiandae, ipsam repellat est quo eaque fuga sequi voluptate error maiores debitis maxime!</p>
-
-<h3>Discover Amazing Products at unbeatable prices</h3>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum architecto quae quod omnis consectetur qui eum culpa molestias. Neque iure unde placeat. Fuga maioris sapiente numquam consequatur aperiam.</p>
-
-<button>Shop now</button>
-
-
-
-        <div id="root"></div>
-        <script type="module" src="/src/main.tsx"></script>
-    </body>
+</body>
 </html>

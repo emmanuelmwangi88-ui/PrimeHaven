@@ -1,104 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/bootstrap/css/register.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - PrimeHaven</title>
+  <link rel="stylesheet" href="/bootstrap/css/theme.css">
+  <link rel="stylesheet" href="/bootstrap/css/register.css">
+  <style>
+    .form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    legend {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    label {
+      font-weight: 600;
+      margin-top: 1rem;
+      display: block;
+      color: var(--dark);
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(197,165,90,0.1);
+    }
+    button {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
-<div class="form">
-    <form action="">
 
-        <legend > Join us and start your journey today!!!</legend><br>
+<!-- Header -->
+<header>
+  <div class="container">
+    <a href="/html/index.html" class="logo">PrimeHaven</a>
+    <nav>
+      <a href="/html/list.html">List</a>
+      <a href="/html/location.html">Find Us</a>
+      <a href="/html/product.html">Products</a>
+      <a href="/html/services.html">Services</a>
+      <a href="/html/register.html">Register</a>
+      <a href="/html/inventory.html">Inventory</a>
+    </nav>
+  </div>
+</header>
 
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" placeholder="enter your name" required><br>
+<main class="container">
+  <div class="form">
+    <form id="registerForm">
+      <legend>Join PrimeHaven Today!</legend>
 
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" placeholder="enter your last name" required><br>
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="enter your email" required><br>
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" placeholder="enter your password" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <label for="phonenumber" >Phone Number:</label><br>
-        <input type="tel" id="phonenumber" name="phonenumber" placeholder="+254 xxx xxx xxx" required><br>
-        
-        <label for="yob" >Year Of Birth:</label><br>
-        <input type="date" id="yob" name="yob" placeholder="08/06/2000" required><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-        <label for="file">upload your cv below:</label><br>
-        <input type="file" id="file" name="file"><br>
+      <label for="phonenumber">Phone Number:</label>
+      <input type="tel" id="phonenumber" name="phonenumber" placeholder="+254 xxx xxx xxx" required>
 
-        <label for="nationality" >Nationality:</label>
-        <!---Dropdown----->
+      <label for="yob">Date of Birth:</label>
+      <input type="date" id="yob" name="yob" required>
 
-        <select name="" id="nationality">
-            <option value="">Select Nationality</option>
-            <option value="Kenyan">Kenyan</option>
-            <option value="Ugandan">Ugandan</option>
-            <option value="Tanzanian">Tanzanian</option>
-            <option value="Rwandan">Rwandan</option>
-            <option value="Burundian">Burundian</option>
-        </select>
+      <label for="nationality">Nationality:</label>
+      <select id="nationality" name="nationality" required>
+        <option value="">Select Nationality</option>
+        <option value="Kenyan">Kenyan</option>
+        <option value="Ugandan">Ugandan</option>
+        <option value="Tanzanian">Tanzanian</option>
+        <option value="Rwandan">Rwandan</option>
+        <option value="Burundian">Burundian</option>
+      </select>
 
-        <br>
+      <label>Gender:</label>
+      <div style="margin-top: 0.5rem;">
+        <input type="radio" id="male" name="gender" value="Male" required> Male
+        <input type="radio" id="female" name="gender" value="Female"> Female
+        <input type="radio" id="other" name="gender" value="Other"> Other
+      </div>
 
-        <label for="gender">Gender:</label><br>
-<div id="gender">
-    <label for="male">Male</label><br>
-     <input type="radio" id="male" name="gender" value="male">
+      <label for="anime">Favorite Anime:</label>
+      <input type="text" id="anime" name="anime" placeholder="e.g. Naruto, One Piece">
 
-    <label for="female">Female</label><br>
-    <input type="radio" id="female" name="gender" value="female">
+      <label for="merchType">Preferred Merchandise Type:</label>
+      <select id="merchType" name="merchType">
+        <option value="">Select Type</option>
+        <option value="Hoodies">Hoodies</option>
+        <option value="T-Shirts">T-Shirts</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Posters">Posters</option>
+      </select>
 
-    <label for="other">Other</label><br>
-    <input type="radio" id="other" name="gender" value="other">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" cols="40" rows="3" placeholder="Tell us why you love anime merch..."></textarea>
 
-</div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</main>
 
-<br>
-<div class="checkbox">
-    <label for="choose web programming languages">Choose Web Programming Languages:</label>
-    <input type="checkbox" id="html" name="html" value="html">
-    <label for="html">HTML</label><br>
-    <input type="checkbox" id="css" name="css" value="css">
-    <label for="css">CSS</label><br>
-    <input type="checkbox" id="javascript" name="javascript" value="javascript">
-    <label for="javascript">JavaScript</label><br>
-    <input type="checkbox" id="php" name="php" value="php">
-    <label for="php">PHP</label><br>
-    <input type="checkbox" id="python" name="python" value="python">
-    <label for="python">Python</label><br>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 PrimeHaven Online Store. All rights reserved.</p>
+</footer>
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" cols="40" rows="3" placeholder="Your message here..."></textarea><br>
-</div>
-
-        <button type="submit">Register</button>
-
-      </form>
-</div>
-    
-</body>
 <script>
-     const form = document.getElementById("registerForm");
-    let clicked = false; // ensures message shows only once
+  const form = document.getElementById("registerForm");
+  let registered = false;
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        if (!clicked) {
-            alert("Register successful!");
-            window.location.href = "index.html";
-            clicked = true;
-        } else {
-            alert("You have already registered.");
-            
-        }
-    });
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    if (!registered) {
+      const fname = document.getElementById("fname").value;
+      const merchType = document.getElementById("merchType").value;
+      alert("Welcome " + fname + "! Registration successful. Your preferred merch: " + merchType);
+      window.location.href = "/html/index.html";
+      registered = true;
+    } else {
+      alert("You have already registered.");
+    }
+  });
 </script>
 
+</body>
 </html>

@@ -1,168 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INVENTORY HOME PAGE</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory - PrimeHaven</title>
+  <link rel="stylesheet" href="/bootstrap/css/theme.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    header {
+      background: var(--dark) !important;
+      border-bottom: 4px solid var(--primary);
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    h1 {
+      color: var(--primary);
+      text-transform: uppercase;
+    }
+    .product-img {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    table td, table th {
+      vertical-align: middle;
+    }
+    section h2 {
+      color: var(--secondary);
+      font-weight: 800;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .category-card {
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      border: none;
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+    }
+    .category-img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    footer {
+      background-color: var(--dark) !important;
+      color: white;
+    }
+    .btn-dark {
+      background-color: var(--primary) !important;
+      border-color: var(--primary) !important;
+      color: white !important;
+    }
+    .btn-dark:hover {
+      background-color: var(--primary-dark) !important;
+    }
+  </style>
 </head>
 <body>
-    <h1 class=" text-center">Products inventory</h1>
-    <p class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat esse necessitatibus. Quidem repellat odio tenetur cupiditate tempora, harum maiores dicta suscipit! Optio explicabo eum quos, repudiandae nulla veritatis facere? </p>
-    <table class="container table table-bordered table-sm table-hover table-striped table-dark">
-        <tr>
-            <th>Product ID</th>
-            <th>Product image</th>
-            <th>Product Name</th>
-            <th>Product Quality</th>
-            <th>Product Quantity</th>
+
+  <header class="text-white p-3 shadow-sm">
+    <div class="container">
+      <a href="/html/index.html" class="logo" style="color: var(--primary);">PrimeHaven</a>
+      <nav>
+        <a href="/html/product.html" style="color: white; text-decoration: none;">Products</a>
+        <a href="/html/inventory.html" style="color: white; text-decoration: none;">Inventory</a>
+        <a href="/html/services.html" style="color: white; text-decoration: none;">Services</a>
+        <a href="/html/register.html" style="color: white; text-decoration: none;">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="text-white text-center p-5 mb-4" style="background: linear-gradient(135deg, var(--dark) 0%, #343a40 100%);">
+    <h1 class="text-uppercase mb-2">Inventory Management</h1>
+    <p class="lead mb-0 text-light">Anime Merchandise Stock Dashboard</p>
+  </div>
+
+  <section class="container mb-5 bg-white p-4 rounded shadow-sm">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">Products</h2>
+
+      <div class="d-flex gap-2">
+        <input type="text" class="form-control" placeholder="Search products...">
+        <button class="btn btn-primary" style="background-color: var(--primary); border-color: var(--primary);">+ Add Product</button>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead style="background-color: var(--dark); color: white;">
+          <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quality</th>
+            <th>Stock</th>
             <th>Actions</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td><img src="https://wholegrainscouncil.org/sites/default/files/thumbnails/image/15616367_ml-wheat-field_0.jpg" alt="wheat" height="100px" width="auto"></td>
-            <td>Wheat</td>
-            <td>Good</td>
-            <td>200 bags</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#001</td>
+            <td><img src="https://tse2.mm.bing.net/th/id/OIP.oWG7iglTjMiFZvkIICyXcwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Naruto Hoodie" class="product-img"></td>
+            <td class="fw-bold">Naruto Hoodie</td>
+            <td>Hoodies</td>
+            <td><span class="badge bg-warning text-dark">Premium</span></td>
+            <td>120 pcs</td>
             <td>
-                <button class="btn btn-info">Edit</button>
-                <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-outline-primary btn-sm">Edit</button> 
+              <button class="btn btn-outline-danger btn-sm">Delete</button>
             </td>
-        </tr>
-                <tr>
-            <td>2</td>
-            <td><img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/f9953262192369.5a881cc915828.jpg" alt="rice" height="100px" width="auto"></td>
-            <td>Rice</td>
-            <td>Good</td>
-            <td>70 bags</td>
+          </tr>
+          <tr>
+            <td>#002</td>
+            <td><img src="https://senpaicart.com/cdn/shop/files/Demon_Slayer_14_67803c48-cc65-4e90-b0a6-c4ae28bed441.jpg?v=1750413602&width=1024" alt="Demon Slayer Shirt" class="product-img"></td>
+            <td class="fw-bold">Demon Slayer T-shirt</td>
+            <td>T-Shirts</td>
+            <td><span class="badge bg-secondary">Good</span></td>
+            <td>200 pcs</td>
             <td>
-                <button class="btn btn-info">Edit</button>
-                <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-outline-primary btn-sm">Edit</button> 
+              <button class="btn btn-outline-danger btn-sm">Delete</button>
             </td>
-        </tr>
-                <tr>
-            <td>3</td>
-            <td><img src="https://tse1.mm.bing.net/th/id/OIP.d4s5QSdKwhBzBZiVU8Oi-gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="sugar" height="100px" width="auto"></td>
-            <td>Sugar</td>
-            <td>Good</td>
-            <td>50 bags</td>
+          </tr>
+          <tr>
+            <td>#003</td>
+            <td><img src="https://i.etsystatic.com/45678669/r/il/845dc7/5370202351/il_1080xN.5370202351_ka8a.jpg" alt="Gojo Hoodie" class="product-img"></td>
+            <td class="fw-bold">Gojo Hoodie (JJK)</td>
+            <td>Hoodies</td>
+            <td><span class="badge bg-warning text-dark">Premium</span></td>
+            <td>150 pcs</td>
             <td>
-                <button class="btn btn-info">Edit</button>
-                <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-outline-primary btn-sm">Edit</button> 
+              <button class="btn btn-outline-danger btn-sm">Delete</button>
             </td>
-        </tr>
-                <tr>
-            <td>4</td>
-            <td><img src="https://i.pinimg.com/736x/3d/19/1d/3d191d997f4e3599e3e26aedbdd82565.jpg" alt="sugar" height="100px" width="100px"></td>
-            <td>Flour</td>
-            <td>Good</td>
-            <td>200 bags</td>
+          </tr>
+          <tr>
+            <td>#004</td>
+            <td><img src="https://img.hutshopping.de/Monkey-D-Luffy-One-Piece-Cap-by-Capslab-beige.66262_rf15.jpg" alt="One Piece Cap" class="product-img"></td>
+            <td class="fw-bold">One Piece Cap</td>
+            <td>Accessories</td>
+            <td><span class="badge bg-secondary">Good</span></td>
+            <td>300 pcs</td>
             <td>
-                <button class="btn btn-info">Edit</button>
-                <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-outline-primary btn-sm">Edit</button> 
+              <button class="btn btn-outline-danger btn-sm">Delete</button>
             </td>
-        </tr>
-
-    </table>
-<br><br>
-
-<p class="text-center fs-3 fw-bold text-bg-secondary "> Product category </p>
-
-<div class="row container gap-3 ">
-
-<div class="col text-center border">
-<h3>Demon slayer</h3>
-<img src="/images/s1.webp" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia</p>
-<a href="/html/product.html"><button class="btn btn-primary w-100">See more</button></a>
-</div>
-
-<div class="col text-center border">
-<h3>Gojo</h3>
-<img src="/images/s6.webp" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia</p>
-<a href="/html/product.html"><button class="btn btn-primary w-100">See more</button></a>
-</div>
-
-<div class="col text-center border">
-<h3>Itachi hoodie</h3>
-<img src="/images/s7.webp" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia</p>
-<a href="/html/product.html"><button class="btn btn-primary w-100">See more</button></a>
-</div>
-
-
-<div class="col text-center border">
-<h3>Itachi hoodie</h3>
-<img src="/images/s4.webp" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia</p>
-<a href="/html/product.html"><button class="btn btn-primary w-100">See more</button></a>
-</div>
-
-
-<div class="col text-center border">
-<h3>Itachi hoodie</h3>
-<img src="/images/s8.webp" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia</p>
-<a href="/html/product.html"><button class="btn btn-primary w-100">See more</button></a>
-</div>
-
-<div class="col text-center border">
-<h3>Itachi hoodie</h3>
-<img src="/images/s1.webp" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia</p>
-<a href="/html/product.html"><button class="btn btn-primary w-100">See more</button></a>
-</div>
-
-<div class="col text-center border">
-<h3>JJk</h3>
-<img src="/images/s2.webp" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia</p>
-<a href="/html/product.html"><button class="btn btn-primary w-100">See more</button></a>
-
-</div>
-
-<br> <br>
-
-<h4 class ="text-center fw-bold "> Contact Us</h4>
-
-<form class ="container border" action="">
-    <div class="row mb-5 container">
-        <div class="col">
-            <label for="fname">First name</label>
-            <input type="text" name="fname" id="fname" class="form-control" required>
-        </div>
-        <div class="col">
-            <label for="lname">Last name</label>
-            <input type="text" name="lname" id="lname" class="form-control" required>
-        </div>
+          </tr>
+        </tbody>
+      </table>
     </div>
-        <div class="row mb-5 container">
-        <div class="col">
-            <label for="email">Email</label>    
-            <input type="email" name="email" id="email" class="form-control" required>
-        </div>
-    </div>
-    <div class="row mb-5 container">
-        <div class="col">
-            <label for="phonenumber" >Phone Number</label>
-            <input type="tel" name="phonenumber" id="phonenumber" class="form-control" required>
-        </div>
-        <div class="col">
-            <label for="yob" >Year Of Birth</label>
-            <input type="date" name="yob" id="yob" class="form-control" required>
-        </div>
+  </section>
 
-    <div class="row mb-5 container">
-        <div class="col">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="10" rows="3" class="form-control" required></textarea>
+  <section class="container mb-5">
+    <h2 class="mb-4 text-center w-100 border-0">Product Categories</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-3">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <img src="https://img.joomcdn.net/e4df264f3a8a384ae484d47cc1992bc3c18d2adf_original.jpeg" alt="Hoodies Category" class="card-img-top category-img mb-3">
+          <div class="card-body text-center p-0 d-flex flex-column">
+            <h4 class="card-title fw-bold">Hoodies</h4>
+            <p class="card-text text-muted mb-4">Premium hoodies inspired by Naruto, JJK, and Demon Slayer.</p>
+            <button class="btn btn-dark w-100 mt-auto">Manage Category</button>
+          </div>
         </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <img src="https://i.etsystatic.com/42064194/r/il/e30c75/4953925072/il_fullxfull.4953925072_743a.jpg" alt="T-Shirts Category" class="card-img-top category-img mb-3">
+          <div class="card-body text-center p-0 d-flex flex-column">
+            <h4 class="card-title fw-bold">T-Shirts</h4>
+            <p class="card-text text-muted mb-4">Trendy anime t-shirts featuring One Piece, Dragon Ball, and more.</p>
+            <button class="btn btn-dark w-100 mt-auto">Manage Category</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.qeZU1a-sTT7dYrtisQONcAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Accessories Category" class="card-img-top category-img mb-3">
+          <div class="card-body text-center p-0 d-flex flex-column">
+            <h4 class="card-title fw-bold">Accessories</h4>
+            <p class="card-text text-muted mb-4">Keychains, wristbands, and collectible packs for anime fans.</p>
+            <button class="btn btn-dark w-100 mt-auto">Manage Category</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card category-card h-100 shadow-sm p-3">
+          <img src="https://cdn.shopify.com/s/files/1/0747/3829/products/mL0215_1024x1024.jpg?v=1571444773" alt="Posters Category" class="card-img-top category-img mb-3">
+          <div class="card-body text-center p-0 d-flex flex-column">
+            <h4 class="card-title fw-bold">Posters</h4>
+            <p class="card-text text-muted mb-4">High-quality posters of iconic anime scenes and characters.</p>
+            <button class="btn btn-dark w-100 mt-auto">Manage Category</button>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-    
+  </section>
+
+  <footer class="text-white text-center p-4 mt-5">
+    <p class="mb-0">&copy; 2026 PrimeHaven Online Store. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<script src="/bootstrap/css/bootstrap.min.css"></script>
-
 </html>

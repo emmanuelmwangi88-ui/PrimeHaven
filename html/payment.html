@@ -1,11 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Options - PrimeHaven</title>
+  <link rel="stylesheet" href="/bootstrap/css/theme.css">
+  <style>
+    header {
+      background: var(--dark);
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    h1 {
+      text-align: center;
+      color: var(--secondary);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+      justify-items: center;
+    }
+    .method {
+      background: white;
+      border: 2px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 150px;
+    }
+    .method:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    #details {
+      margin-top: 2rem;
+      padding: 2rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    input, select {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      padding: 0.8rem;
+      margin: 0.8rem auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      max-width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <div class="container">
+      <a href="/html/index.html" class="logo">PrimeHaven</a>
+      <nav>
+        <a href="/html/product.html">Products</a>
+        <a href="/html/services.html">Services</a>
+        <a href="/html/register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Payment Options</h1>
+    <p>Select your preferred payment method:</p>
+    <div class="methods">
+      <div class="method" onclick="showDetails('mpesa')">M-Pesa</div>
+      <div class="method" onclick="showDetails('airtel')">Airtel Money</div>
+      <div class="method" onclick="showDetails('equitel')">Equitel</div>
+      <div class="method" onclick="showDetails('card')">Visa / MasterCard</div>
+      <div class="method" onclick="showDetails('paypal')">PayPal</div>
+      <div class="method" onclick="showDetails('pesapal')">Pesapal</div>
+      <div class="method" onclick="showDetails('stripe')">Stripe</div>
+    </div>
+
+    <div id="details">
+      <p><strong>Click a payment method above to see details.</strong></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PrimeHaven Online Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showDetails(method) {
+      let details = document.getElementById("details");
+      let content = "";
+
+      switch(method) {
+        case "mpesa":
+          content = `
+            <h3>M-Pesa</h3>
+            <p>Enter your M-Pesa number and amount to pay.</p>
+            <input type="text" id="phone" placeholder="M-Pesa Number (07XXXXXXXX)">
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick='confirmPayment("M-Pesa")'>Pay with M-Pesa</button>
+          `;
+          break;
+        case "airtel":
+          content = `
+            <h3>Airtel Money</h3>
+            <p>Enter your Airtel number and amount.</p>
+            <input type="text" id="phone" placeholder="Airtel Number (07XXXXXXXX)">
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick='confirmPayment("Airtel Money")'>Pay with Airtel</button>
+          `;
+          break;
+        case "equitel":
+          content = `
+            <h3>Equitel</h3>
+            <p>Enter your Equitel number and amount.</p>
+            <input type="text" id="phone" placeholder="Equitel Number (07XXXXXXXX)">
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick='confirmPayment("Equitel")'>Pay with Equitel</button>
+          `;
+          break;
+        case "card":
+          content = `
+            <h3>Visa / MasterCard</h3>
+            <p>Enter your card details.</p>
+            <input type="text" id="cardNumber" placeholder="Card Number (16 digits)">
+            <input type="text" id="expiry" placeholder="Expiry (MM/YY)">
+            <input type="text" id="cvv" placeholder="CVV (3 digits)">
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick='confirmPayment("Card")'>Pay with Card</button>
+          `;
+          break;
+        case "paypal":
+          content = `
+            <h3>PayPal</h3>
+            <p>Enter your PayPal email and amount.</p>
+            <input type="email" id="paypalEmail" placeholder="PayPal Email">
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick='confirmPayment("PayPal")'>Pay with PayPal</button>
+          `;
+          break;
+        case "pesapal":
+          content = `
+            <h3>Pesapal</h3>
+            <p>Pay via Pesapal gateway.</p>
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick='confirmPayment("Pesapal")'>Pay with Pesapal</button>
+          `;
+          break;
+        case "stripe":
+          content = `
+            <h3>Stripe</h3>
+            <p>Enter card details for Stripe checkout.</p>
+            <input type="text" id="cardNumber" placeholder="Card Number (16 digits)">
+            <input type="text" id="expiry" placeholder="Expiry (MM/YY)">
+            <input type="text" id="cvv" placeholder="CVV (3 digits)">
+            <input type="number" id="amount" placeholder="Amount (KES)">
+            <button onclick='confirmPayment("Stripe")'>Pay with Stripe</button>
+          `;
+          break;
+      }
+
+      details.innerHTML = content;
+    }
+
+    function confirmPayment(method) {
+      let amount = document.getElementById("amount") ? document.getElementById("amount").value : null;
+      if (!amount || amount <= 0) {
+        alert("Please enter a valid amount.");
+        return;
+      }
+      alert("Payment of KES " + amount + " initiated successfully via " + method + "!");
+    }
+  </script>
 </body>
 </html>

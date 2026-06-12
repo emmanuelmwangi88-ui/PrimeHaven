@@ -1,213 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Showcase</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PrimeHaven Products</title>
+  <link rel="stylesheet" href="/bootstrap/css/theme.css" />
+  <link rel="stylesheet" href="/bootstrap/css/showcase.css" />
   <style>
-    body {
-      text-align: start;
-      padding: 1rem;
-      background-color: #ecedef;
-      font-family: Arial, sans-serif;
+    .product-card img, .table-img {
+      object-fit: cover;
     }
-    header {
-        border-radius: 12px;
-      display: flex;
-      background-color: green;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
+    .table-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
     }
-    .nav-links ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links li {
-      margin: 0 10px;
-    }
-    a {
-      color: #100c00;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #90f637;
-    }
-    .section-title {
-      color: #e9791c;
-      text-align: center;
-      background-color: #e5e6e5;
-      border-radius: 12px;
-      font-size: 30px;
-      margin-top: 20px;
-      padding: 10px;
-    }
-    ol, ul {
-      margin-left: 20px;
-    }
-    li {
-      color: #46450d;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    table, th, td {
-      border: 1px solid #333;
-    }
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      background-color: #333;
-      color: white;
-      padding: 1px;
+    .hero-right img {
+      max-width: 100%;
+      height: auto;
       border-radius: 8px;
-    }
-    form {
-      margin-top: 20px;
-      background: #f4f4f4;
-      padding: 15px;
-      border-radius: 10px;
-    }
-    form input, form textarea, form button {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 8px;
-    }
-    form button {
-      background-color: green;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #5bcc33;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav-links">
-      <ul>
-        <li><a href="#TopItems">Top Items</a></li>
-        <li><a href="#Recents">Recents</a></li>
-        <li><a href="#Nested">Nested List</a></li>
-        <li><a href="#Description">Description</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="PrimeHaven Home">
+        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=100&auto=format&fit=crop" alt="PrimeHaven logo" style="width:40px; height:40px; border-radius:50%; object-fit:cover;" />
+        <span>PrimeHaven</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="product.html" class="active">Products</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Ordered list -->
-  <div class="section-title" id="TopItems">Top 4 Selling Products This Month</div>
-  <ol type="a">
-    <li>
-      Wireless Bluetooth Headphones
-      <p>High-quality sound with noise cancellation.</p>
-    </li>
-    <li>
-      Smart Watch
-      <p>Tracks fitness, heart rate, and notifications.</p>
-    </li>
-    <li>
-      Yoga Mat
-      <p>Durable and eco-friendly material.</p>
-    </li>
-    <li>
-      Water Bottle
-      <p>Insulated to keep drinks hot or cold.</p>
-    </li>
-  </ol>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Anime Merchandise Showcase</h1>
+        <p class="lead">Curated hoodies, tees, posters and accessories inspired by your favorite anime. Browse, filter, and add items to checkout.</p>
+        <div class="controls">
+          <label>
+            <strong>Filter by category</strong>
+            <select id="filterCategory">
+              <option value="all">All</option>
+              <option value="Hoodies">Hoodies</option>
+              <option value="T-Shirts">T-Shirts</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Posters">Posters</option>
+            </select>
+          </label>
 
-  <!-- Unordered list -->
-  <div class="section-title" id="Recents">Top 4 Selling Products Last Month</div>
-  <ul>
-    <li>Casual T-shirt</li>
-    <li>Sports Wear</li>
-    <li>Jeans Trousers</li>
-    <li>Jackets and Coats</li>
-  </ul>
+          <label>
+            <strong>Search</strong>
+            <input id="searchInput" type="search" placeholder="Search product name or tag">
+          </label>
+        </div>
+      </div>
 
-  <!-- Nested list -->
-  <div class="section-title" id="Nested">Nested List</div>
-  <ul>
-    <li>DSA
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?q=80&w=600&auto=format&fit=crop" alt="merch display">
+      </div>
+    </section>
+
+    <section class="grid-section">
+      <h2>Featured Products</h2>
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="inventory-section">
+      <h2>Inventory Table</h2>
+      <div class="table-wrap">
+        <table id="inventoryTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price (KES)</th>
+              <th>Stock</th>
+              <th>Sold</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="summary">
+        <div><strong>Total Items</strong> <span id="totalItems">0</span></div>
+        <div><strong>Total Stock</strong> <span id="totalStock">0</span></div>
+        <div><strong>Total Sold</strong> <span id="totalSold">0</span></div>
+      </div>
+    </section>
+
+    <section class="tracking-section">
+      <h2>Quick Sales Tracker</h2>
+      <form id="saleForm" class="sale-form">
+        <label for="saleProduct">Product</label>
+        <select id="saleProduct"></select>
+
+        <label for="saleQty">Quantity Sold</label>
+        <input id="saleQty" type="number" min="1" value="1">
+
+        <button type="submit" class="btn primary">Record Sale</button>
+        <p id="saleMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="info-section">
+      <h2>About This Catalog</h2>
+      <p>This catalog is a live, client-side inventory demo for PrimeHaven. It includes product images hosted on reliable CDNs, stock tracking, quick sales recording, and a simple search and filter. Use the table to monitor stock and the sales tracker to simulate purchases. Data is stored in your browser localStorage so it persists between visits on the same device.</p>
+
+      <h3>How tracking works</h3>
       <ul>
-        <li>Arrays</li>
-        <li>Linked Lists</li>
-        <li>Stacks</li>
-        <li>Queues</li>
+        <li><strong>Stock</strong> decreases when a sale is recorded.</li>
+        <li><strong>Sold</strong> increments to show cumulative units sold.</li>
+        <li><strong>Summary</strong> updates automatically to reflect totals.</li>
       </ul>
-    </li>
-    <li>Web Technologies
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>PHP</li>
-      </ul>
-    </li>
-    <li>Cloud Computing
-      <ul>
-        <li>AWS</li>
-        <li>Google Cloud</li>
-        <li>Microsoft Azure</li>
-      </ul>
-    </li>
-    <li>Machine Learning
-      <ul>
-        <li>Supervised Learning</li>
-        <li>Unsupervised Learning</li>
-        <li>Reinforcement Learning</li>
-      </ul>
-    </li>
-    <li>Aptitude</li>
-    <li>Gate</li>
-    <li>Placement</li>
-    <li>Artificial Intelligence</li>
-    <li>Neural Networks</li>
-  </ul>
 
-  <!-- Description list -->
-  <div class="section-title" id="Description">Description List</div>
-  <dl>
-    <dt>HTML</dt>
-    <dd>HTML is a markup language used for structuring and presenting content on the World Wide Web.</dd>
-    <dt>CSS</dt>
-    <dd>CSS is used to style and format HTML elements.</dd>
-    <dt>JavaScript</dt>
-    <dd>JavaScript adds interactivity and dynamic behavior to web pages.</dd>
-  </dl>
+      <h3>Next steps for production</h3>
+      <ol>
+        <li>Connect to a backend API for persistent storage and multi-user access.</li>
+        <li>Integrate payment gateways for live checkout (M-Pesa, Stripe, PayPal).</li>
+        <li>Add charts and export options for market analysis.</li>
+      </ol>
+    </section>
+  </main>
 
-  <!-- Contact Form -->
-  <div class="section-title" id="Contact">Contact Us</div>
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" rows="4" placeholder="Your message here..."></textarea>
-
-    <button type="submit">Submit</button>
-  </form>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Product Showcase. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 PrimeHaven. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
   </footer>
+
+  <script>
+    // Updated Product data array using live, direct image URLs from online
+    const PRODUCTS = [
+      { id: 1, name: "Naruto Hoodie", category: "Hoodies", price: 2500, stock: 120, sold: 30,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/13100033097707755863", tags: ["naruto","hoodie"] },
+      { id: 2, name: "Demon Slayer T-Shirt", category: "T-Shirts", price: 900, stock: 200, sold: 45,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/16399417240455932319", tags: ["demon slayer","tshirt"] },
+      { id: 3, name: "Gojo Hoodie", category: "Hoodies", price: 2600, stock: 150, sold: 20,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/4549431880813161952", tags: ["gojo","jjk","hoodie"] },
+      { id: 4, name: "One Piece Cap", category: "Accessories", price: 700, stock: 300, sold: 60,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/11680619147023908594", tags: ["one piece","cap"] },
+      { id: 5, name: "Attack on Titan Poster", category: "Posters", price: 450, stock: 500, sold: 110,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/4541872136177369524", tags: ["aot","poster"] },
+      { id: 6, name: "Itachi Hoodie", category: "Hoodies", price: 2500, stock: 180, sold: 40,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/12462308300030748499", tags: ["itachi","hoodie"] },
+      { id: 7, name: "Accessories Pack", category: "Accessories", price: 1000, stock: 250, sold: 75,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/16366453111569696364", tags: ["accessories","pack"] },
+      { id: 8, name: "Dragon Ball Z T-Shirt", category: "T-Shirts", price: 950, stock: 220, sold: 55,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/4574672121140886041", tags: ["dbz","tshirt"] },
+      { id: 9, name: "MHA Keychain", category: "Accessories", price: 350, stock: 400, sold: 140,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/241512195233221689", tags: ["mha","keychain"] },
+      { id: 10, name: "Jujutsu Kaisen Poster", category: "Posters", price: 480, stock: 260, sold: 35,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/3424366954007100466", tags: ["jjk","poster"] },
+      { id: 11, name: "Tokyo Ghoul Hoodie", category: "Hoodies", price: 2400, stock: 90, sold: 12,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/12865773051148173936", tags: ["tokyo ghoul","hoodie"] },
+      { id: 12, name: "Studio Ghibli Poster", category: "Posters", price: 520, stock: 320, sold: 80,
+        img: "http://googleusercontent.com/image_collection/image_retrieval/8448037535650260116", tags: ["ghibli","poster"] }
+    ];
+
+    // Use localStorage to persist inventory changes
+    const STORAGE_KEY = "primehaven_inventory_v1";
+    function loadInventory() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(PRODUCTS));
+        return PRODUCTS.slice();
+      }
+      try {
+        return JSON.parse(raw);
+      } catch {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(PRODUCTS));
+        return PRODUCTS.slice();
+      }
+    }
+    function saveInventory(data) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    }
+
+    // Render functions
+    const productGrid = document.getElementById("productGrid");
+    const inventoryTableBody = document.querySelector("#inventoryTable tbody");
+    const filterCategory = document.getElementById("filterCategory");
+    const searchInput = document.getElementById("searchInput");
+    const saleProductSelect = document.getElementById("saleProduct");
+    const saleForm = document.getElementById("saleForm");
+    const saleMessage = document.getElementById("saleMessage");
+
+    let inventory = loadInventory();
+
+    function renderGrid(items) {
+      productGrid.innerHTML = "";
+      items.forEach(p => {
+        const card = document.createElement("article");
+        card.className = "product-card";
+        card.innerHTML = `
+          <img src="${p.img}" alt="${p.name}" loading="lazy">
+          <div class="card-body">
+            <h3>${p.name}</h3>
+            <p class="meta">${p.category} • KES ${p.price}</p>
+            <p class="stock">In stock: <strong>${p.stock}</strong></p>
+            <div class="card-actions">
+              <button class="btn small" data-id="${p.id}" onclick="addToCart(${p.id})">Buy</button>
+              <button class="btn outline small" data-id="${p.id}" onclick="viewDetails(${p.id})">Details</button>
+            </div>
+          </div>
+        `;
+        productGrid.appendChild(card);
+      });
+    }
+
+    function renderTable(items) {
+      inventoryTableBody.innerHTML = "";
+      let totalItems = 0, totalStock = 0, totalSold = 0;
+      items.forEach(p => {
+        totalItems++;
+        totalStock += Number(p.stock);
+        totalSold += Number(p.sold);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${p.id}</td>
+          <td><img src="${p.img}" alt="${p.name}" class="table-img"></td>
+          <td>${p.name}</td>
+          <td>${p.category}</td>
+          <td>${p.price}</td>
+          <td>${p.stock}</td>
+          <td>${p.sold}</td>
+          <td>
+            <button class="btn btn-edit" data-id="${p.id}">Edit</button>
+            <button class="btn btn-delete" data-id="${p.id}">Delete</button>
+          </td>
+        `;
+        inventoryTableBody.appendChild(tr);
+      });
+      document.getElementById("totalItems").textContent = totalItems;
+      document.getElementById("totalStock").textContent = totalStock;
+      document.getElementById("totalSold").textContent = totalSold;
+      populateSaleSelect(items);
+      attachTableHandlers();
+    }
+
+    function populateSaleSelect(items) {
+      saleProductSelect.innerHTML = "";
+      items.forEach(p => {
+        const opt = document.createElement("option");
+        opt.value = p.id;
+        opt.textContent = `${p.name} (stock ${p.stock})`;
+        saleProductSelect.appendChild(opt);
+      });
+    }
+
+    function attachTableHandlers() {
+      document.querySelectorAll(".btn-edit").forEach(btn => {
+        btn.onclick = () => {
+          const id = Number(btn.dataset.id);
+          const item = inventory.find(x => x.id === id);
+          const newStock = prompt(`Update stock for ${item.name}`, item.stock);
+          if (newStock !== null) {
+            item.stock = Number(newStock);
+            saveInventory(inventory);
+            renderTable(inventory);
+            renderGrid(filterAndSearch());
+          }
+        };
+      });
+      document.querySelectorAll(".btn-delete").forEach(btn => {
+        btn.onclick = () => {
+          const id = Number(btn.dataset.id);
+          if (!confirm("Delete this product from inventory?")) return;
+          inventory = inventory.filter(x => x.id !== id);
+          saveInventory(inventory);
+          renderTable(inventory);
+          renderGrid(filterAndSearch());
+        };
+      });
+    }
+
+    // Filtering and search
+    function filterAndSearch() {
+      const cat = filterCategory.value;
+      const q = searchInput.value.trim().toLowerCase();
+      return inventory.filter(p => {
+        const matchCat = cat === "all" || p.category === cat;
+        const matchQ = !q || p.name.toLowerCase().includes(q) || (p.tags && p.tags.join(" ").includes(q));
+        return matchCat && matchQ;
+      });
+    }
+
+    filterCategory.addEventListener("change", () => {
+      renderGrid(filterAndSearch());
+    });
+    searchInput.addEventListener("input", () => {
+      renderGrid(filterAndSearch());
+    });
+
+    // Sale form
+    saleForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const id = Number(saleProductSelect.value);
+      const qty = Number(document.getElementById("saleQty").value);
+      const item = inventory.find(x => x.id === id);
+      if (!item) {
+        saleMessage.textContent = "Select a valid product.";
+        saleMessage.className = "form-message error";
+        return;
+      }
+      if (qty <= 0 || qty > item.stock) {
+        saleMessage.textContent = "Invalid quantity. Check available stock.";
+        saleMessage.className = "form-message error";
+        return;
+      }
+      item.stock -= qty;
+      item.sold += qty;
+      saveInventory(inventory);
+      renderTable(inventory);
+      renderGrid(filterAndSearch());
+      saleMessage.textContent = `Recorded sale of ${qty} x ${item.name}.`;
+      saleMessage.className = "form-message success";
+      setTimeout(() => saleMessage.textContent = "", 4000);
+    });
+
+    // Simple actions
+    function addToCart(id) {
+      const item = inventory.find(x => x.id === id);
+      if (!item || item.stock <= 0) {
+        alert("Item out of stock.");
+        return;
+      }
+      window.location.href = `payment.html?product=${encodeURIComponent(item.name)}&price=${item.price}&id=${item.id}`;
+    }
+    window.addToCart = addToCart;
+
+    function viewDetails(id) {
+      const item = inventory.find(x => x.id === id);
+      if (!item) return;
+      alert(`${item.name}\nCategory: ${item.category}\nPrice: KES ${item.price}\nStock: ${item.stock}\nSold: ${item.sold}`);
+    }
+    window.viewDetails = viewDetails;
+
+    // Initialize
+    renderGrid(inventory);
+    renderTable(inventory);
+  </script>
 </body>
 </html>

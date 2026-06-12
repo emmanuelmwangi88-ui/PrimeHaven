@@ -1,51 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PrimeHaven Services</title>
   <link rel="icon" href="/images/services.png" />
-  <link rel="stylesheet" href="/bootstrap/css/services.css">
+  <link rel="stylesheet" href="/bootstrap/css/theme.css" />
+  <link rel="stylesheet" href="/bootstrap/css/services.css" />
 </head>
 <body>
-      
-        <h1 id="shipping">Free Shipping</h1>
-        <p id="p1">All orders are delivered at no extra cost, ensuring convenience and affordability. We partner with trusted couriers to guarantee timely arrivals.</p>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="PrimeHaven Home">
+        <img src="https://senpaicart.com/cdn/shop/files/Demon_Slayer_14_67803c48-cc65-4e90-b0a6-c4ae28bed441.jpg?v=1750413602&width=1024" alt="PrimeHaven logo" />
+        <span>PrimeHaven</span>
+      </a>
 
-        <h2>30-Day Money Back Guarantee</h2>
-        <p>If you’re not satisfied, you can return your purchase within 30 days for a full refund — no questions asked. Your satisfaction is our priority.</p>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="product.html">Products</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="register.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        <h3>Secure Payment</h3>
-        <p>We use advanced encryption and trusted payment gateways to keep your transactions safe. Shop confidently knowing your data is protected.</p>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Services that power your anime merch experience</h1>
+          <p class="lead">Fast shipping, secure payments, VIP perks, and 24/7 support — everything you need to shop with confidence.</p>
+          <div class="hero-ctas">
+            <button id="shopNow" class="btn primary">Shop Now</button>
+            <button id="learnMore" class="btn outline">Learn How We Ship</button>
+          </div>
+        </div>
+        <div class="hero-media" aria-hidden="false">
+        </div>
+      </div>
+    </section>
 
-        <h4>24/7 Customer Support</h4>
-        <p>Our dedicated support team is available around the clock to answer questions, resolve issues, and guide you through your shopping journey.</p>
+    <!-- Core Services -->
+    <section class="services container" id="core-services">
+      <h2>Core Services</h2>
+      <div class="grid-3">
+        <article class="service-card" aria-labelledby="s1">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v2H3zM3 7h18v2H3zM3 11h18v2H3z"/></svg>
+          <h3 id="s1">Free & Fast Shipping</h3>
+          <p><strong>Free shipping</strong> on orders over <strong>KES 2,500</strong>. Same-week dispatch for in-stock items; tracked delivery with partner couriers.</p>
+          <ul>
+            <li>Next-day dispatch (Nairobi metro)</li>
+            <li>Tracked M-Pesa delivery confirmation</li>
+            <li>International shipping options available</li>
+          </ul>
+        </article>
 
+        <article class="service-card" aria-labelledby="s2">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l4 4H8zM4 6h16v14H4z"/></svg>
+          <h3 id="s2">30-Day Money-Back Guarantee</h3>
+          <p>Not satisfied? Return within <strong>30 days</strong> for a full refund. Easy returns, no hidden fees.</p>
+          <ul>
+            <li>Free return shipping for defective items</li>
+            <li>Simple online return portal</li>
+            <li>Refunds processed within 5 business days</li>
+          </ul>
+        </article>
 
-<!---------Division------------>
+        <article class="service-card" aria-labelledby="s3">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1L3 5v6c0 5 3 9 9 11 6-2 9-6 9-11V5l-9-4z"/></svg>
+          <h3 id="s3">Secure Payments</h3>
+          <p>We accept <strong>M-Pesa</strong>, <strong>Airtel Money</strong>, <strong>Visa/MasterCard</strong>, <strong>PayPal</strong>, and <strong>Pesapal</strong>. All transactions are encrypted.</p>
+          <ul>
+            <li>PCI-compliant card processing</li>
+            <li>Two-factor verification for large orders</li>
+            <li>Invoice and receipt emailed instantly</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-<div id="section1">
-  <h1>Join Our Newsletter</h1>
-  <p1>Subscribe to our newsletter to stay updated on the latest offers and exclusive deals.</p1>
-  <button type="submit">Subscribe</button>
-</div>
+    <!-- VIP & Subscriptions -->
+    <section class="vip container" id="vip">
+      <div class="vip-grid">
+        <div class="vip-info">
+          <h2>PrimeHaven VIP</h2>
+          <p>Join our VIP program for early drops, exclusive discounts, and priority shipping. Members earn points on every purchase redeemable for store credit.</p>
+          <ul>
+            <li>Early access to limited-edition drops</li>
+            <li>Exclusive 10% welcome discount</li>
+            <li>Birthday rewards and event invites</li>
+          </ul>
+          <button id="joinVip" class="btn primary">Join VIP</button>
+        </div>
+        <div class="vip-media">
+          <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f3f6b6b6b6b6b6b6b6b6b6b6b6b6b6b" alt="VIP package" />
+        </div>
+      </div>
+    </section>
 
-<h5>VIP Treatment</h5>
-<div id="section2">
-<div class="VIP">
-    <img src="/images/s5.webp" alt="vip" width="50%" height="50%">
-    <p2>Get a VIP treatment and enjoy exclusive discounts and special offers on our products.</p2>
-    <br>
-    <button type="submit">Buy Now</button>
+    <!-- Newsletter -->
+    <section class="newsletter container" id="newsletter">
+      <h2>Newsletter</h2>
+      <p>Get exclusive deals, restock alerts, and event invites. No spam — unsubscribe anytime.</p>
+      <form id="newsletterForm" class="newsletter-form" novalidate>
+        <label for="nlEmail" class="sr-only">Email address</label>
+        <input id="nlEmail" name="email" type="email" placeholder="you@example.com" required />
+        <select id="nlInterest" name="interest" aria-label="Interest">
+          <option value="">I'm interested in...</option>
+          <option value="hoodies">Hoodies</option>
+          <option value="tshirts">T-Shirts</option>
+          <option value="accessories">Accessories</option>
+          <option value="posters">Posters</option>
+        </select>
+        <button type="submit" class="btn primary">Subscribe</button>
+        <p id="nlMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
 
-</div>
-<div class="VIP">
-    <img src="/images/s5.webp" alt="vip" width="50%" height="50%">
-    <p2>Get a VIP treatment and enjoy exclusive discounts and special offers on our products.</p2>
-    <br>
-    <button type="submit">Buy Now</button>
+    <!-- FAQs -->
+    <section class="faqs container" id="faqs">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How long does shipping take?</summary>
+          <p>Local deliveries typically arrive within 2–5 business days. Express options are available at checkout.</p>
+        </details>
+        <details>
+          <summary>How do I return an item?</summary>
+          <p>Open a return request in your account, print the return label, and drop the package at the nearest partner courier.</p>
+        </details>
+        <details>
+          <summary>Which payment methods do you accept?</summary>
+          <p>We accept M-Pesa, Airtel Money, Visa/MasterCard, PayPal, Pesapal, and Stripe for international cards.</p>
+        </details>
+        <details>
+          <summary>Do you ship internationally?</summary>
+          <p>Yes — international shipping is available. Rates and delivery times vary by destination.</p>
+        </details>
+      </div>
+    </section>
 
-</div>
+    <!-- Testimonials & Contact -->
+    <section class="testimonials container" id="testimonials">
+      <h2>What customers say</h2>
+      <div class="test-grid">
+        <blockquote>
+          <p>"Fast delivery and the hoodie quality is amazing — exactly like the pictures."</p>
+          <cite>— Aisha K., Nairobi</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Great customer support. They helped me track a delayed order and resolved it quickly."</p>
+          <cite>— Brian M., Mombasa</cite>
+        </blockquote>
+      </div>
 
+      <div class="contact-card">
+        <h3>Contact Support</h3>
+        <p><strong>Email:</strong> support@primehaven.com</p>
+        <p><strong>Phone:</strong> +254 700 123 456 (WhatsApp available)</p>
+        <p><strong>Live chat:</strong> Available 09:00–22:00 EAT</p>
+        <a href="contact.html" class="btn outline">Open Support Ticket</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 PrimeHaven. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation CTA handlers
+    document.getElementById('shopNow').addEventListener('click', () => {
+      window.location.href = 'product.html';
+    });
+    document.getElementById('learnMore').addEventListener('click', () => {
+      document.getElementById('core-services').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('joinVip').addEventListener('click', () => {
+      window.location.href = 'register.html#vip';
+    });
+
+    // Newsletter form handling
+    const nlForm = document.getElementById('newsletterForm');
+    const nlEmail = document.getElementById('nlEmail');
+    const nlMessage = document.getElementById('nlMessage');
+
+    nlForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = nlEmail.value.trim();
+      if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+        nlMessage.textContent = 'Please enter a valid email address.';
+        nlMessage.classList.add('error');
+        return;
+      }
+      // Simulate subscription (replace with real API call)
+      nlMessage.textContent = 'Thanks — you are subscribed! Check your inbox for a welcome email.';
+      nlMessage.classList.remove('error');
+      nlForm.reset();
+    });
+
+    // Accessibility: allow keyboard toggle for details (optional)
+    document.querySelectorAll('.faq-list details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        // Could send analytics event here
+      });
+    });
+  </script>
 </body>
 </html>

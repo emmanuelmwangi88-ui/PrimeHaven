@@ -1,10 +1,9 @@
-<!--table colspan and rowspan-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Grades Table</title>
+  <title>Anime Merch Sales Dashboard</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,7 +20,7 @@
       margin-bottom: 10px;
     }
     table {
-      width: 80%;
+      width: 90%;
       margin: 20px auto;
       border-collapse: collapse;
       background-color: #fff;
@@ -33,85 +32,140 @@
       text-align: center;
     }
     th {
-      background-color: #2ecc71;
+      background-color: #c5a55a;
       color: white;
     }
     tr:nth-child(even) {
       background-color: #ecf0f1;
     }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #c5a55a;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 8px 0;
+    }
   </style>
 </head>
 <body>
-  <h1>Academic Performance Comparison</h1>
+  <h1>PrimeHaven Anime Merchandise Sales</h1>
+  
   <table>
-    <caption>Academic Grades</caption>
+    <caption>Sales Performance by Product & Channel</caption>
     <tr>
-      <th>Subject</th>
-      <th>Type</th>
-      <th>John Doe</th>
-      <th>Miriam Luthier</th>
+      <th rowspan="2">Product Category</th>
+      <th rowspan="2">Item</th>
+      <th colspan="3">Sales Channels</th>
+      <th rowspan="2">Total Sales (KES)</th>
     </tr>
     <tr>
-      <td rowspan="2">Biology</td>
-      <td>Practical</td>
-      <td>A</td>
-      <td>A</td>
+      <th>Online Store</th>
+      <th>Physical Shop</th>
+      <th>Wholesale</th>
     </tr>
     <tr>
-      <td>Theory</td>
-      <td>A+</td>
-      <td>A</td>
+      <td rowspan="2">Hoodies</td>
+      <td>Demon Slayer Hoodie</td>
+      <td>120,000</td>
+      <td>80,000</td>
+      <td>50,000</td>
+      <td>250,000</td>
     </tr>
     <tr>
-      <td rowspan="2">Chemistry</td>
-      <td>Practical</td>
-      <td>B</td>
-      <td>C+</td>
+      <td>Itachi Hoodie</td>
+      <td>100,000</td>
+      <td>60,000</td>
+      <td>40,000</td>
+      <td>200,000</td>
     </tr>
     <tr>
-      <td>Theory</td>
-      <td>A</td>
-      <td>C+</td>
+      <td rowspan="2">T-Shirts</td>
+      <td>One Piece T-shirt</td>
+      <td>75,000</td>
+      <td>40,000</td>
+      <td>20,000</td>
+      <td>135,000</td>
     </tr>
     <tr>
-      <td rowspan="2">Physics</td>
-      <td>Practical</td>
-      <td>A-</td>
-      <td>A</td>
+      <td>Luffy T-shirt</td>
+      <td>70,000</td>
+      <td>35,000</td>
+      <td>15,000</td>
+      <td>120,000</td>
     </tr>
     <tr>
-      <td>Theory</td>
-      <td>A+</td>
-      <td>B</td>
+      <td rowspan="2">Accessories</td>
+      <td>Anime Accessories Pack</td>
+      <td>50,000</td>
+      <td>25,000</td>
+      <td>10,000</td>
+      <td>85,000</td>
     </tr>
     <tr>
-        <td rowspan="2">Mathematics</td>
-        <td>Practical</td>
-        <td>C-</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>Theory</td>
-        <td>C+</td>
-        <td>B+</td>
+      <td>Keychains & Posters</td>
+      <td>40,000</td>
+      <td>20,000</td>
+      <td>8,000</td>
+      <td>68,000</td>
     </tr>
-    <tr>
-        <td rowspan="2">English</td>
-        <td>Practical</td>
-        <td>D</td>
-        <td>A-</td>
-      </tr>
-      <tr>
-        <td>Theory</td>
-        <td>B</td>
-        <td>C</td>
-      </tr>
-      <tr style="border-radius: 12px;background-color: #72e47f;">
-        <td>ALL SUBJECTS</td>
-        <td>TOTAL</td>
-        <td>A-</td>
-        <td>B+</td>
-      </tr>
+    <tr style="background-color:#72e47f; font-weight:bold;">
+      <td colspan="2">TOTAL SALES</td>
+      <td>455,000</td>
+      <td>260,000</td>
+      <td>143,000</td>
+      <td>858,000</td>
+    </tr>
   </table>
+
+  <!-- Market Insights -->
+  <section>
+    <h2>Market Insights</h2>
+    <p>Anime merchandise sales have shown steady growth, with hoodies leading as the most popular category. Online sales dominate, accounting for more than 50% of total revenue, while wholesale partnerships contribute significantly to bulk orders.</p>
+    <ul>
+      <li>🔥 Hoodies are the top-selling items, especially Demon Slayer and Itachi designs.</li>
+      <li>📈 T-shirts are gaining traction among younger fans due to affordability.</li>
+      <li>🎁 Accessories are strong impulse buys, often bundled with larger orders.</li>
+    </ul>
+  </section>
+
+  <!-- Store Highlights -->
+  <section>
+    <h2>Store Highlights</h2>
+    <p>PrimeHaven has expanded its reach by combining online convenience with physical store experiences. Seasonal promotions and anime event tie-ins have boosted sales significantly.</p>
+    <ul>
+      <li>✔ Exclusive limited-edition hoodies during anime premieres.</li>
+      <li>✔ Loyalty program offering discounts for repeat customers.</li>
+      <li>✔ Collaborations with local anime clubs for special events.</li>
+    </ul>
+  </section>
+
+  <!-- Sales Tracking -->
+  <section>
+    <h2>Sales Tracking & Analytics</h2>
+    <p>We track our performance using:</p>
+    <ul>
+      <li>📊 Monthly sales reports segmented by product category.</li>
+      <li>📈 Growth trends compared to previous quarters.</li>
+      <li>💻 Digital dashboards integrating M-Pesa and card payment data.</li>
+      <li>🔍 Customer feedback surveys to identify popular designs.</li>
+    </ul>
+    <p>Future plans include integrating AI-driven analytics to forecast demand and optimize inventory management.</p>
+  </section>
+
+  <footer style="text-align:center; margin-top:30px; color:#2c3e50;">
+    &copy; 2026 PrimeHaven Anime Store. All rights reserved.
+  </footer>
 </body>
 </html>

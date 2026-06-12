@@ -1,40 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/images/location.png" />
-    <title>Location</title>
-    <style>
-        Body {
-            background-color: white;
-        }
-        h1 {
-            color: #45851b;
-            text-align: center;
-            background-color: #e5e6e5;
-            border-radius: 12px;
-        }
-        .iframe{
-            height: 500px;
-            width: 500px;
-        }
-        .a href{
-            height: 500px;
-            width: 500px;
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/location.png" />
+  <title>Find Us - PrimeHaven</title>
+  <link rel="stylesheet" href="/bootstrap/css/theme.css">
+  <style>
+    header {
+      background: var(--dark);
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    h1 {
+      color: var(--secondary);
+      text-align: center;
+      background-color: #f0f0f0;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 0;
+    }
+    .info {
+      text-align: center;
+      margin: 2rem;
+      font-size: 1.1rem;
+    }
+    .maps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+      justify-items: center;
+    }
+    iframe {
+      border: 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      height: 400px;
+    }
+    .contact-info {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .contact-info h2 {
+      color: var(--secondary);
+    }
+  </style>
 </head>
 <body>
-    <h1>Location </h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+  <header>
+    <div class="container">
+      <a href="/html/index.html" class="logo">PrimeHaven</a>
+      <nav>
+        <a href="/html/index.html">Home</a>
+        <a href="/html/product.html">Products</a>
+        <a href="/html/services.html">Services</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <h1>Find Us</h1>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.639194900631!2d36.81252197770996!3d-1.2820135999999918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1100534843ad%3A0x9601a0e7f77b6e07!2sThe%20Bazaar!5e0!3m2!1sen!2snl!4v1779957183772!5m2!1sen!2snl" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="info">
+      <p>Visit our store at The Bazaar, Nairobi. Explore our exclusive anime merchandise collection!</p>
+    </div>
 
-<iframe src="product.html"height="500px" width="500px"> our store</iframe>
+    <div class="maps-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.639194900631!2d36.81252197770996!3d-1.2820135999999918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1100534843ad%3A0x9601a0e7f77b6e07!2sThe%20Bazaar!5e0!3m2!1sen!2snl!4v1779957183772!5m2!1sen!2snl" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>📧 Email:</strong> support@primehaven.com</p>
+      <p><strong>📞 Phone:</strong> +254 700 123 456</p>
+      <p><strong>🕐 Store Hours:</strong> Mon - Sat, 9 AM - 7 PM (EAT)</p>
+      <p><strong>📍 Location:</strong> The Bazaar, Nairobi, Kenya</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 PrimeHaven Online Store. All rights reserved.</p>
+  </footer>
 </body>
 </html>

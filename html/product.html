@@ -1,96 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Product page</title>
-        <link rel="stylesheet" href="/bootstrap/css/product.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - PrimeHaven</title>
+  <link rel="stylesheet" href="/bootstrap/css/theme.css">
+  <link rel="stylesheet" href="/bootstrap/css/product.css">
+</head>
+<body>
 
-    </head>
-    <body>
-
-        <h1>Featured products</h1>
+<!-- Header -->
 <header>
+  <div class="container">
+    <a href="/html/index.html" class="logo">PrimeHaven</a>
     <nav>
+      <a href="/html/list.html">List</a>
+      <a href="/html/location.html">Find Us</a>
+      <a href="/html/product.html">Products</a>
+      <a href="/html/services.html">Services</a>
+      <a href="/html/register.html">Register</a>
+      <a href="/html/inventory.html">Inventory</a>
     </nav>
+  </div>
 </header>
 
-<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae quaerat nulla voluptatem possimus impedit, ut quis asperiores quam aut, optio reprehenderit minus. Facere qui nam veniam repudiandae nemo inventore.</p>
+<main class="container">
+  <h1>Featured Products</h1>
 
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Explore our exclusive anime merchandise collection. High-quality hoodies, t-shirts, and accessories inspired by your favorite characters.
+  </p>
 
-<section1 class="product-section">
+<section class="product-section">
+  <h2 class="text-3xl font-bold"><b>Anime Merchandise</b></h2>
+  <div class="product-grid">
+    <div class="card">
+      <img src="/images/s1.webp" alt="Demon Slayer Hoodie" class="product-image">
+      <h3 class="product-name">Demon Slayer Hoodie</h3>
+      <p class="product-price">KES 2500</p>
+      <button onclick="goToPayment('Demon Slayer Hoodie', 2500)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://i.etsystatic.com/45678669/r/il/845dc7/5370202351/il_1080xN.5370202351_ka8a.jpg" alt="Gojo Hoodie" class="product-image">
+      <h3 class="product-name">Gojo Hoodie</h3>
+      <p class="product-price">KES 2400</p>
+      <button onclick="goToPayment('Gojo Hoodie', 2400)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="/images/s3.webp" alt="One Piece T-shirt" class="product-image">
+      <h3 class="product-name">One Piece T-shirt</h3>
+      <p class="product-price">KES 750</p>
+      <button onclick="goToPayment('One Piece T-shirt', 750)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://img.hutshopping.de/Monkey-D-Luffy-One-Piece-Cap-by-Capslab-beige.66262_rf15.jpg" alt="Luffy T-shirt" class="product-image">
+      <h3 class="product-name">Luffy T-shirt</h3>
+      <p class="product-price">KES 700</p>
+      <button onclick="goToPayment('Luffy T-shirt', 700)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://img.joomcdn.net/e4df264f3a8a384ae484d47cc1992bc3c18d2adf_original.jpeg" alt="Samurai White Hoodie" class="product-image">
+      <h3 class="product-name">Samurai White Hoodie</h3>
+      <p class="product-price">KES 2500</p>
+      <button onclick="goToPayment('Samurai White Hoodie', 2500)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://i.etsystatic.com/42064194/r/il/e30c75/4953925072/il_fullxfull.4953925072_743a.jpg" alt="Saroru Gojo" class="product-image">
+      <h3 class="product-name">Saroru Gojo</h3>
+      <p class="product-price">KES 800</p>
+      <button onclick="goToPayment('Saroru Gojo', 800)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.oWG7iglTjMiFZvkIICyXcwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Itachi Hoodie" class="product-image">
+      <h3 class="product-name">Itachi Hoodie</h3>
+      <p class="product-price">KES 2500</p>
+      <button onclick="goToPayment('Itachi Hoodie', 2500)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.qeZU1a-sTT7dYrtisQONcAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Accessories Pack" class="product-image">
+      <h3 class="product-name">Accessories Pack</h3>
+      <p class="product-price">KES 1000</p>
+      <button onclick="goToPayment('Accessories Pack', 1000)">Add to Cart</button>
+    </div>
+     <div class="card">
+      <img src="/images/s2.webp" alt="Accessories Pack" class="product-image">
+      <h3 class="product-name">Gojo hoodie</h3>
+      <p class="product-price">KES 2500</p>
+      <button onclick="goToPayment('Gojo hoodie', 2500)">Add to Cart</button>
+    </div>
+       <div class="card">
+      <img src="/images/s7.webp" alt="Accessories Pack" class="product-image">
+      <h3 class="product-name">Itachi Hoodie</h3>
+      <p class="product-price">KES 2500</p>
+      <button onclick="goToPayment('Itachi Hoodie', 2500)">Add to Cart</button>
+    </div>
+      <div class="card">
+      <img src="/images/s8.webp" alt="Accessories Pack" class="product-image">
+      <h3 class="product-name">Glove and Beanie</h3>
+      <p class="product-price">KES 1500</p>
+      <button onclick="goToPayment('Glove and Beanie', 1500)">Add to Cart</button>
+    </div>
+      <div class="card">
+      <img src="/images/s4.webp" alt="Accessories Pack" class="product-image">
+      <h3 class="product-name">Luffy T-shirt</h3>
+      <p class="product-price">KES 700</p>
+      <button onclick="goToPayment('Luffy T-shirt', 700)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="/images/s5.webp" alt="Accessories Pack" class="product-image">
+      <h3 class="product-name">Samurai White Hoodie</h3>
+      <p class="product-price">KES 2500</p>
+      <button onclick="goToPayment('Samurai White Hoodie', 2500)">Add to Cart</button>
+    </div>
     
-    <h2 class ="text-3xl font-bold" ><b>Anime merchandise</b>
-    </h2>
-    <div class="product-grid">
-    <div class="card">
-        <img src="images/s1.webp" alt="product1" class="product-image">
-        <h3 class="product-name">Demon slayer hoodie</h3>
-        <p class="product-price">ksh 2500</p>
-        <button>Add to cart</button>
-    </div>
-    <div class="card">
-        <img src="images/s2.webp" alt="product2" class="product-image">
-        <h3 class="product-name">Gojo hoodie</h3>
-        <p class="product-price">ksh 2400</p>
-        <button>Add to cart</button>
-    </div>
-    <div class="card">
-        <img src="images/s3.webp" alt="product3" class="product-image">
-        <h3 class="product-name">One piece t-shirt</h3>
-        <p class="product-price">ksh 750</p>
-                <button>Add to cart</button>
+  </div>
+</section>
+</main>
 
-    </div>
-    <div class="card">
-        <img src="images/s4.webp" alt="product4" class="product-image">
-        <h3 class="product-name">Luffy t-shirt</h3>
-        <p class="product-price">ksh 700</p>
-                <button>Add to cart</button>
-
-    </div>
-    <div class="card">
-        <img src="images/s5.webp" alt="product5" class="product-image">
-        <h3 class="product-name">Samurai white hoodie</h3>
-        <p class="product-price">ksh 2500</p>
-                <button>Add to cart</button>
-
-    </div>
-    <div class="card">
-        <img src="images/s6.webp" alt="product6" class="product-image">
-        <h3 class="product-name">Saroru Gojo</h3>
-        <p class="product-price">ksh 800</p>
-                <button>Add to cart</button>
-
-    </div>
-    <div class="card">
-        <img src="images/s7.webp" alt="product7" class="product-image">
-        <h3 class="product-name">Itachi hoodie</h3>
-        <p class="product-price">ksh 2500</p>
-                <button>Add to cart</button>
-
-    </div>
-    <div class="card">
-        <img src="images/s8.webp" alt="product8" class="product-image">
-        <h3 class="product-name">Accessories pack</h3>
-        <p class="product-price">ksh 1000</p>
-                 <button>Add to cart</button>
-
-    </div>
-    </div>
-
-</section1>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 PrimeHaven Online Store. All rights reserved.</p>
+</footer>
 
 <script>
-  // JavaScript
-  const storeBtn = document.getElementById("storeBtn");
-
-  storeBtn.addEventListener("click", () => {
-    // Redirect to the website
-    window.location.href = "https://store.crunchyroll.com/eu/nl/en";
-  });
+  function goToPayment(productName, price) {
+    window.location.href = `payment.html?product=${encodeURIComponent(productName)}&price=${price}`;
+  }
 </script>
 
-    </body>
+</body>
 </html>
